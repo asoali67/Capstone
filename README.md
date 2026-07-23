@@ -16,28 +16,31 @@ I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple
 
 #### Methodology
 1. Investigating the data and identifying the features and the target
-   a. looking for null data's
-   b. Visualizing the target variable distribution and check the classification balance
-   c. Visualizing the distribution of features "BMI" and "Weight" to target features "ObesityCatagory"
+   * Looking for null data's
+   * Visualizing the target variable distribution and check the classification balance
+   * Visualizing the distribution of features "BMI" and "Weight" to target features "ObesityCatagory"
 2. Break the data into test and train sets and do a pairplot to visualize the distribution of each feature with respect to the target class
 3. Encode using OrdinalEncoder to encode the only string feature "Gender"
-4. Now its time to create Models to analyse the data, as a prilimenary investigation i have used two main methods
-   a. Using RandomForestClassifier
-     i. to identify the optimal number of forests and use it.
-    ii. Using RandomForestClassifier to identify the feature score to select only the features that is relevant to the classification
-   iii. 
+4. Now its time to create Models to analyses the data, as a preliminary investigation i have used two main methods
+   * Using RandomForestClassifier
+      * Identify the optimal number of forests and use it.
+      * Identify the feature score to select only the features that is relevant to the classification
+      * Run the model and obtain the Out Of Bag score and the classification report that has the metrics
+      * The other models i used all of Knn, Logistic Regression, Decision tree and SVM to obtain the metrics accuracy, precision, recall and f1 score
+
 
 #### Results
-What did your research find?
+The scores obtained from Random Forest was very high oob 0.997, and the report gave a very high score for each class, for the rest of model the score were lower but also high like 0.8 and higher
+this result does concern me to look for reasons behind such high score, such as looking at the bias and variance. 
+Note i have not tuned these models to its optimal.
 
 #### Next steps
-What suggestions do you have for next steps?
+improve the models by using GridSearchCV to fined the best hyper parameters and identify the reason behind the high score i have obtained and weather i have overfitting or underfitting.
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+- [kaggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction)
+- [Capstone jupyter notebook](https://github.com/asoali67/Capstone/blob/main/Capstone.ipynb)
 
 
 ##### Contact and Further Information
