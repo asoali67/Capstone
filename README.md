@@ -15,7 +15,17 @@ To classify a new sample of the population to Obesity level, and to understand i
 I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction) The data seem to be balanced and small in size for this exercise not missing data’s to clean..
 
 #### Methodology
-What methods are you using to answer the question?
+1. Investigating the data and identifying the features and the target
+   a. looking for null data's
+   b. Visualizing the target variable distribution and check the classification balance
+   c. Visualizing the distribution of features "BMI" and "Weight" to target features "ObesityCatagory"
+2. Break the data into test and train sets and do a pairplot to visualize the distribution of each feature with respect to the target class
+3. Encode using OrdinalEncoder to encode the only string feature "Gender"
+4. Now its time to create Models to analyse the data, as a prilimenary investigation i have used two main methods
+   a. Using RandomForestClassifier
+     i. to identify the optimal number of forests and use it.
+    ii. Using RandomForestClassifier to identify the feature score to select only the features that is relevant to the classification
+   iii. 
 
 #### Results
 What did your research find?
