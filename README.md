@@ -31,7 +31,25 @@ The out put of these model will include the Accuracy, Precision, Recall adn f1 s
 
 
 <h2>Data Set Information</h2>
-I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction) The data seem to be balanced and small in size for this exercise not missing data’s to clean..
+<h4>Data Set</h4>
+I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction). 
+</br>
+</br>
+The data is collection of features that affect a persons classification to be one of the obesity related classes Normal weight, Obese, Overweight, and Underweight. 
+the Features are </br>
+<img src="https://github.com/asoali67/Capstone/blob/main/images/Obesity%20features.png">
+
+<h2>Data Preprocessing/Preparation</h2>
+<h4>Analyze the Data</h4>
+<ul><
+  <li>
+    <b>Missing Datas</b> : looking at the data for null and missing datas, the data did not have any missing one </br> <img src="https://github.com/asoali67/Capstone/blob/main/images/null%20Data.png">
+  </li>
+/ul>
+
+
+
+<h4></h4>
 
 #### Methodology
 1. Investigating the data and identifying the features and the target
