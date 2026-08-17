@@ -24,27 +24,21 @@ The problem is a classification problem and all the models used are supervised m
 * SVC (Support Vector Classifier)
 
 The out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table 
-</br></br>
-<img width="666" height="35" alt="output table header" src="https://github.com/asoali67/Capstone/blob/main/images/output%20table%20header.png" />
+![Out put features](images/output_table_header.png)
 
 
-
-<h2>Data Set Information</h2>
-<h4>Data Set</h4>
+## Data Set Information
+#### Data Set
 I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction). 
-</br>
-</br>
-The data is collection of features that affect a persons classification to be one of the obesity related classes Normal weight, Obese, Overweight, and Underweight. 
-the Features are </br>
-<img src="https://github.com/asoali67/Capstone/blob/main/images/Obesity%20features.png">
 
-<h2>Data Preprocessing/Preparation</h2>
-<h4>Analyze the Data</h4>
-<ul><
-  <li>
-    <b>Missing Datas</b> : looking at the data for null and missing datas, the data did not have any missing one </br> <img src="https://github.com/asoali67/Capstone/blob/main/images/null%20Data.png">
-  </li>
-/ul>
+The data is collection of features that affect a persons classification to be one of the obesity related classes Normal weight, Obese, Overweight, and Underweight. 
+The Features are 
+
+![Obesity Features.](images/Obesity_features.png)
+
+## Data Preprocessing/Preparation
+#### Analyze the Data
+* **Missing Datas** : looking at the data for null and missing datas, the data did not have any missing one ![Obesity Features.](images/null_Data.png)
 
 
 
