@@ -16,7 +16,7 @@ Obesity significantly increases healthcare costs, driving up U.S. direct medical
 To classify a new sample of the population to Obesity level, and to understand is the population obesity level is increasing or decreasing overtime. This will help to predict weather the population health risks increased or decreased overtime and also gives an idea of how the health trend will be in the future.
 
 <h2>Model Outcomes or Predictions</h2>
-The problem is a classification problem, All the models are supervised machine learning models. For this peoject i will be using five different models 
+The problem is a classification problem and all the models used are supervised machine learning models. For this project i will be using five different models 
 <ul>
   <li>RandomForestClassifier</li>
   <li>LogisticRegression</li>
@@ -24,8 +24,9 @@ The problem is a classification problem, All the models are supervised machine l
   <li>DecisionTreeClassifier</li>
   <li>SVC (Support Vector Classifier)</li>
 </ul>
-THe out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table
-<img width="666" height="35" alt="image" src="https://github.com/user-attachments/assets/7a8b119b-9111-4d28-8484-4b4ccfa3b626" />
+The out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table 
+</br></br>
+<img width="666" height="35" alt="output table header" src="https://github.com/asoali67/Capstone/blob/main/images/output%20table%20header.png" />
 
 
 
