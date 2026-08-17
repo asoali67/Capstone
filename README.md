@@ -1,29 +1,28 @@
-<h1>Classification of person's obesity </h1> 
+#Classification of person's obesity 
 
 **Author** Aso Ali
 
-<h2>Executive summary</h2>
+## Executive summary
 
-<h4>Project overview and goals</h4>
+#### Project overview and goals
 The objective of this exercise is the ability to predict person's body type and its obesity level based on certain criteria like Age, Gender, Height, weight, BMI and physical activity level. The prediction will classify the person to one of these categories; Normal Weight, Obese, Overweight, Underweight.
 
 
-<h4>Rationale</h4>
+#### Rationale
 Obesity severely strains the healthcare system, driving nearly $173 billion in direct annual medical costs in the U.S. alone. It dramatically increases the risk for chronic diseases—such as type 2 diabetes, heart disease, and some cancers—while challenging daily operations with higher surgical complication rates and specialized equipment needs.
 Obesity significantly increases healthcare costs, driving up U.S. direct medical expenses by nearly $173 billion annually (according to the Centers for Disease Control and Prevention). Adults with obesity incur medical expenditures that are roughly double or 36% to 100% higher than those of normal-weight individuals, with costs escalating alongside the severity of the condition and related chronic illnesses.
 
-<h4>Research Question</h4>
+#### Research Question
 To classify a new sample of the population to Obesity level, and to understand is the population obesity level is increasing or decreasing overtime. This will help to predict weather the population health risks increased or decreased overtime and also gives an idea of how the health trend will be in the future.
 
-<h2>Model Outcomes or Predictions</h2>
+## Model Outcomes or Predictions
 The problem is a classification problem and all the models used are supervised machine learning models. For this project i will be using five different models 
-<ul>
-  <li>RandomForestClassifier</li>
-  <li>LogisticRegression</li>
-  <li>KNeighborsClassifier</li>
-  <li>DecisionTreeClassifier</li>
-  <li>SVC (Support Vector Classifier)</li>
-</ul>
+* RandomForestClassifier
+* LogisticRegression
+* KNeighborsClassifier
+* DecisionTreeClassifier
+* SVC (Support Vector Classifier)
+
 The out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table 
 </br></br>
 <img width="666" height="35" alt="output table header" src="https://github.com/asoali67/Capstone/blob/main/images/output%20table%20header.png" />
