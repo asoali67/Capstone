@@ -1,4 +1,4 @@
-#Classification of person's obesity 
+# Classification of person's obesity 
 
 **Author** Aso Ali
 
@@ -38,8 +38,14 @@ The Features are
 
 ## Data Preprocessing/Preparation
 #### 1. Analyze the Data
-* **Missing Data's** : looking at the data for null and missing datas, the data did not have any missing one ![Obesity Features.](images/null_Data.png)
-* **Analyze Target Balance** : Looking at the target classes, while the classes where not totally balanced it was also not too bad ![Obesity Features Balance.](images/ObesityCategory.png)
+* **Missing Data's** : looking at the data for null and missing datas, the data did not have any missing one
+
+  ![Obesity Features.](images/null_Data.png)
+  
+* **Analyze Target Balance** : Looking at the target classes, while the classes where not totally balanced it was also not too bad
+
+  ![Obesity Features Balance.](images/ObesityCategory.png)
+  
 * **Feature selection** : I have followed two wayes to do selection depending if it is for the base modeling analysis or for the final prediction mode;s
   *  For the base model feature selection i have selected all the features regarless of its importance
   *  For the final data prediction, i have only selected the features that are the most correlate and affects the obesity and they are BMI, Weight, and Height. The selction of hight in this case because its strong correlation to weight where the taller the person is the more weight he has regardless of bsing overweight
@@ -58,7 +64,22 @@ The data had only one string feature 'Gender' which i encoded using OrdinalEncod
     X_test = encoder.fit_transform(X_test)
 
 
+## Modeling
+Two data modeling and 5 modeling algorithms used in this excersize
 
+The Modeling algorithms are 
+* RandomForestClassifier
+* LogisticRegression
+* KNeighborsClassifier
+* DecisionTreeClassifier
+* SVC (Support Vector Classifier)
+  
+1. **Base Model** :
+   For the Base mode, the data was used with all its features and without any feature enginerings, and the Model algorithems were ran with there default values. The aim if this excersize to get a base performance data for the predictions
+2. **Final Modeling**:
+   For the data i have selected 3 features, two of the features 'BMI' and 'Weight' are primary features that obesity level can be identified from, the other feature is 'Height' which i selected since hight does affect the weight and therefore it dose influence the overall obesity level. To fined the strongest features that affect Obesity Level Category, I ploted bar plot between each of the fratures and the target to visualize the correlation strength between them. 
+
+   To tune the hyperparameters for all models i used **GridSearchCV** (Grid Search Cross-Validation), my selection decition to use GridSearchCV was based on the fact that my data is not large and comutational cost penelty is not high. I have also used **OneVsRestClassifier** (One-vs-All or OvR) for training in the case of models that do not handle mulyi-class datas well.
 
 
 #### Methodology
