@@ -119,6 +119,8 @@ As I mentioned in the previous section, I have used two data modeling and five m
 
    ![Final Model Matrix](images/FinalModel_matrix.png)
 
+   Using same example, calculating the precision and recall for 'Obese" feature from above matrix
+
     TP = 63
    
    FP = 0 
