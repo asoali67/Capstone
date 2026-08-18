@@ -23,12 +23,12 @@ The problem is a classification problem and all the models used are supervised m
 * DecisionTreeClassifier
 * SVC (Support Vector Classifier)
 
-The out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table 
+The out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table
+
 ![Out put features](images/output_table_header.png)
 
 
-## Data Set Information
-#### Data Set
+## Data Set Information:
 I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction). 
 
 The data is collection of features that affect a persons classification to be one of the obesity related classes Normal weight, Obese, Overweight, and Underweight. 
@@ -37,12 +37,18 @@ The Features are
 ![Obesity Features.](images/Obesity_features.png)
 
 ## Data Preprocessing/Preparation
-#### Analyze the Data
-* **Missing Datas** : looking at the data for null and missing datas, the data did not have any missing one ![Obesity Features.](images/null_Data.png)
+#### 1. Analyze the Data
+* **Missing Data's** : looking at the data for null and missing datas, the data did not have any missing one ![Obesity Features.](images/null_Data.png)
+* **Analyze Target Balance** : Looking at the target classes, while the classes where not totally balanced it was also not too bad ![Obesity Features Balance.](images/ObesityCategory.png)
+* **Feature selection** : I have followed two wayes to do selection depending if it is for the base modeling analysis or for the final prediction mode;s
+  *  For the base model feature selection i have selected all the features regarless of its importance
+  *  For the final data prediction, i have only selected the features that are the most correlate and affects the obesity and they are BMI, Weight, and Height. The selction of hight in this case because its strong correlation to weight where the taller the person is the more weight he has regardless of bsing overweight
+
+#### 2. Data Split
 
 
 
-<h4></h4>
+
 
 #### Methodology
 1. Investigating the data and identifying the features and the target
