@@ -1,4 +1,4 @@
-# Classification of person's obesity 
+# Classification of obesity Category Level
 
 **Author** Aso Ali
 
@@ -92,29 +92,59 @@ As I menssioned in the previous section, I have used two data modeling and five 
 
     ![Base Model Performance](images/base_model_perf.png)
 
-   The for further analysis i used the confution matrix to validate TP and TN. it was clead from the matrix that models did give a high precision in prediciting future datas.
+   The for further analysis i used the Confusion matrix to validate TP and TN. it was clead from the matrix that models did give a high precision in prediciting future datas.
 
     ![Base Model Matrix](images/BaseMode_matrix.png)
 
-   As an example, calculating the precision and recall for Normal weight feature from above matrix
+   As an example, calculating the precision and recall for 'Obese" feature from above matrix
 
-   TP = 123
+   TP = 62
    
-   FP = 0 + 0 + 1 = 1
+   FP = 0 
    
-   FN = 0
+   FN = 1
 
-   pression = 123/(123 +1)
+   pression = 62/62
    
-   recall = 123/123
+   recall = 62/63
 
-   This result is a very high score.
+   This result is a perfect score.
 
 2. **Final Modeling"
    For the final modelings i used only used three features "BMI', 'Weight' and 'Height'. I have also ran V yo tune all the hyper-parameters. THe scoring improved a little but not much, the base model scores was already high and it is expected to be a little improvements.
 
    ![Final Model Performance](images/FinalModel_performance.png)
+
+   Again for further analysis, i have obtained the Confusion matrix. As per the Base model, i have relied on the precision and recall for scoring. 
+
+   ![Final Model Matrix](images/FinalModel_matrix.png)
+
+    TP = 63
    
+   FP = 0 
+   
+   FN = 0
+
+   pression = 63/63
+   
+   recall = 63/63
+
+   Again this result is a perfect score.
+
+   To have another visual verification, i drew the precision recall curve, well no surprice it was perfect too
+   
+   ![Precision Recall Curve](images/precision_recall_curve.png)
+
+## My Final thoughts
+   To be honest, for this data it seem that all model did a great job of giving high scores, yes RandomForestClassifies and Decission Tree gave the highest but i think the other models did welll too. So i have got such high scores? well i am going to list them bellow and all these i am listing will have a great effect on predicting real workd data's.
+
+   * The first thong it bothered me with this data is that it was too clean, no miising datas and no abnormaility. THis data has already been cleaned for me but the problem is that i do not have an insite of how that cleaning is done. How the missing datas been dealt with? removing them, subsitutin them with their average and how is the average been taken. it is a black box at this point. 
+   * The other thing is the data sample is not large enough to get confident that it i have actually trained these models on enough data to be able to predict future data's correctly.
+   * Lack of features, this data has only six features. While it may be good enough to predict the Obesity Category Level, it lacks features to give me more information such as
+     * Adding a date and time line will gives more information weather the population weight is increasing or decreasin with time, that would help to predict the health cost in the future
+     * Adding geographical location will help directing health cost more to the areas needed
+     * Adding Occupation to the features helps to identify wich work cases overwight and helps to direct helth recomendation to workers in these fields
+     * Adding diet helthiness, for example having a feature to mark the over all diet of the person as (Healthy, not Healthy) and define what these categories meant, helps to direct health cost to populatin with unhealthy diet (fried foods for example or consuming alot of processed foods) 
 
    
    
