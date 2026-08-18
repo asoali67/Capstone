@@ -45,6 +45,17 @@ The Features are
   *  For the final data prediction, i have only selected the features that are the most correlate and affects the obesity and they are BMI, Weight, and Height. The selction of hight in this case because its strong correlation to weight where the taller the person is the more weight he has regardless of bsing overweight
 
 #### 2. Data Split
+the data split is 30/70 whith stratiy set to prevent training bias
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 42, test_size=0.33, stratify=y)
+
+
+#### 3. Encoding the date
+The data had only one string feature 'Gender' which i encoded using OrdinalEncoder 
+
+    encoder = ce.OrdinalEncoder(cols=['Gender'])
+    X_train = encoder.fit_transform(X_train)
+    X_test = encoder.fit_transform(X_test)
 
 
 
