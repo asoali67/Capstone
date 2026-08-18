@@ -51,7 +51,7 @@ The Features are
   *  For the final data prediction, i have only selected the features that are the most correlate and affects the obesity and they are BMI, Weight, and Height. The selection of height in this case because its strong correlation to weight where the taller the person is the more weight he has regardless of being overweight
 
 #### 2. Data Split
-the data split is 30/70 whith stratiy set to prevent training bias
+the data split is 30/70 with stratiy paremeter set to target to prevent training bias
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 42, test_size=0.33, stratify=y)
 
@@ -65,7 +65,7 @@ The data had only one string feature 'Gender' which i encoded using OrdinalEncod
 
 
 ## Modeling
-Two data modeling and 5 modeling algorithms used in this excersize
+Two data modeling and 5 modeling algorithms used in this excercise
 
 The Modeling algorithms are 
 * RandomForestClassifier
@@ -75,17 +75,17 @@ The Modeling algorithms are
 * SVC (Support Vector Classifier)
   
 1. **Base Model** :
-   For the Base mode, the data was used with all its features and without any feature enginerings, and the Model algorithems were ran with there default values. The aim if this excersize to get a base performance data for the predictions
+   For the Base mode, the data was used with all its features and without any feature engineering’s, and the Model algorithms were run with their default values. The aim if this excersize to get a base performance data for the predictions
 2. **Final Modeling**:
-   For the data i have selected 3 features, two of the features 'BMI' and 'Weight' are primary features that obesity level can be identified from, the other feature is 'Height' which i selected since hight does affect the weight and therefore it dose influence the overall obesity level. To fined the strongest features that affect Obesity Level Category, I ploted bar plot between each of the fratures and the target to visualize the correlation strength between them. As an example:
+   For the data i have selected 3 features, two of the features 'BMI' and 'Weight' are primary features that obesity level can be identified from, the other feature is 'Height' which i selected since height does affect the weight and therefore it dose influence the overall obesity level. To find the strongest features that affect Obesity Level Category, I plotted bar plot between each of the features and the target to visualize the correlation strength between them. As an example:
 
    ![BMI_ObesityCategory](images/BMI_ObesityCategory.png)
    ![Weight_ObesityCategory](images/Weight_ObesityCategory.png)
 
-   To tune the hyperparameters for all models i used **GridSearchCV** (Grid Search Cross-Validation), my selection decition to use GridSearchCV was based on the fact that my data is not large and comutational cost penelty is not high. I have also used **OneVsRestClassifier** (One-vs-All or OvR) for training in the case of models that do not handle mulyi-class datas well.
+   To tune the hyperparameters for all models i used **GridSearchCV** (Grid Search Cross-Validation), my selection decision to use GridSearchCV was based on the fact that my data is not large and computational cost penelty is not high. I have also used **OneVsRestClassifier** (One-vs-All or OvR) for training in the case of models that do not handle multi-class datas well.
 
 ## Model Evaluation
-As I menssioned in the previous section, I have used two data modeling and five modeling algorithems. First getting the prediction scores using base model using default parametes, them getting the performance scores using tuned hyperparameters for the models.
+As I mentioned in the previous section, I have used two data modeling and five modeling algorithms. First getting the prediction scores using base model using default parameters, them getting the performance scores using tuned hyperparameters for the models.
 
 1. **Base Model Evaluation**
    Using the data with all features and without any feature engineering, the data i haot it was a very high score. Having the calsses not totally balaced, i did use Precision and recall scores as a guide and not the accuracy. From the data i got, the scores were already high and i do think its because the strong correlation between 'BMI' and 'Weight' Features to the target "ObesityCategory'
