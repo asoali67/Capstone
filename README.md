@@ -23,7 +23,7 @@ The problem is a classification problem and all the models used are supervised m
 * DecisionTreeClassifier
 * SVC (Support Vector Classifier)
 
-The out put of these model will include the Accuracy, Precision, Recall adn f1 scores in the form of a table
+The output of these models will include the Accuracy, Precision, Recall and f1 scores in the form of a table
 
 ![Out put features](images/output_table_header.png)
 
@@ -31,7 +31,7 @@ The out put of these model will include the Accuracy, Precision, Recall adn f1 s
 ## Data Set Information:
 I have obtained the date from [Kraggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction). 
 
-The data is collection of features that affect a persons classification to be one of the obesity related classes Normal weight, Obese, Overweight, and Underweight. 
+The data is collection of features that affect a person's classification to be one of the obesity related classes Normal weight, Obese, Overweight, and Underweight. 
 The Features are 
 
 ![Obesity Features.](images/Obesity_features.png)
@@ -46,9 +46,9 @@ The Features are
 
   ![Obesity Features Balance.](images/ObesityCategory.png)
   
-* **Feature selection** : I have followed two wayes to do selection depending if it is for the base modeling analysis or for the final prediction mode;s
-  *  For the base model feature selection i have selected all the features regarless of its importance
-  *  For the final data prediction, i have only selected the features that are the most correlate and affects the obesity and they are BMI, Weight, and Height. The selction of hight in this case because its strong correlation to weight where the taller the person is the more weight he has regardless of bsing overweight
+* **Feature selection** : I have followed two ways to do selection depending if it is for the base modeling analysis or for the final prediction models
+  *  For the base model feature selection i have selected all the features regardless of its importance
+  *  For the final data prediction, i have only selected the features that are the most correlate and affects the obesity and they are BMI, Weight, and Height. The selection of height in this case because its strong correlation to weight where the taller the person is the more weight he has regardless of being overweight
 
 #### 2. Data Split
 the data split is 30/70 whith stratiy set to prevent training bias
