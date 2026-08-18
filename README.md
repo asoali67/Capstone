@@ -77,35 +77,52 @@ The Modeling algorithms are
 1. **Base Model** :
    For the Base mode, the data was used with all its features and without any feature enginerings, and the Model algorithems were ran with there default values. The aim if this excersize to get a base performance data for the predictions
 2. **Final Modeling**:
-   For the data i have selected 3 features, two of the features 'BMI' and 'Weight' are primary features that obesity level can be identified from, the other feature is 'Height' which i selected since hight does affect the weight and therefore it dose influence the overall obesity level. To fined the strongest features that affect Obesity Level Category, I ploted bar plot between each of the fratures and the target to visualize the correlation strength between them. 
+   For the data i have selected 3 features, two of the features 'BMI' and 'Weight' are primary features that obesity level can be identified from, the other feature is 'Height' which i selected since hight does affect the weight and therefore it dose influence the overall obesity level. To fined the strongest features that affect Obesity Level Category, I ploted bar plot between each of the fratures and the target to visualize the correlation strength between them. As an example:
+
+   ![BMI_ObesityCategory](images/BMI_ObesityCategory.png)
+   ![Weight_ObesityCategory](images/Weight_ObesityCategory.png)
 
    To tune the hyperparameters for all models i used **GridSearchCV** (Grid Search Cross-Validation), my selection decition to use GridSearchCV was based on the fact that my data is not large and comutational cost penelty is not high. I have also used **OneVsRestClassifier** (One-vs-All or OvR) for training in the case of models that do not handle mulyi-class datas well.
 
+## Model Evaluation
+As I menssioned in the previous section, I have used two data modeling and five modeling algorithems. First getting the prediction scores using base model using default parametes, them getting the performance scores using tuned hyperparameters for the models.
 
-#### Methodology
-1. Investigating the data and identifying the features and the target
-   * Looking for null data's
-   * Visualizing the target variable distribution and check the classification balance
-   * Visualizing the distribution of features "BMI" and "Weight" to target features "ObesityCatagory"
-2. Break the data into test and train sets and do a pairplot to visualize the distribution of each feature with respect to the target class
-3. Encode using OrdinalEncoder to encode the only string feature "Gender"
-4. Now its time to create Models to analyses the data, as a preliminary investigation i have used two main methods
-   * Using RandomForestClassifier
-      * Identify the optimal number of forests and use it.
-      * Identify the feature score to select only the features that is relevant to the classification
-      * Run the model and obtain the Out Of Bag score and the classification report that has the metrics
-      * The other models i used all of Knn, Logistic Regression, Decision tree and SVM to obtain the metrics accuracy, precision, recall and f1 score
+1. **Base Model Evaluation**
+   Using the data with all features and without any feature engineering, the data i haot it was a very high score. Having the calsses not totally balaced, i did use Precision and recall scores as a guide and not the accuracy. From the data i got, the scores were already high and i do think its because the strong correlation between 'BMI' and 'Weight' Features to the target "ObesityCategory'
+
+    ![Base Model Performance](images/base_model_perf.png)
+
+   The for further analysis i used the confution matrix to validate TP and TN. it was clead from the matrix that models did give a high precision in prediciting future datas.
+
+    ![Base Model Matrix](images/BaseMode_matrix.png)
+
+   As an example, calculating the precision and recall for Normal weight feature from above matrix
+
+   TP = 123
+   
+   FP = 0 + 0 + 1 = 1
+   
+   FN = 0
+
+   pression = 123/(123 +1)
+   
+   recall = 123/123
+
+   This result is a very high score.
+
+2. **Final Modeling"
+   For the final modelings i used only used three features "BMI', 'Weight' and 'Height'. I have also ran V yo tune all the hyper-parameters. THe scoring improved a little but not much, the base model scores was already high and it is expected to be a little improvements.
+
+   ![Final Model Performance](images/FinalModel_performance.png)
+   
+
+   
+   
+   
 
 
-#### Results
-The scores obtained from Random Forest was very high oob 0.997, and the report gave a very high score for each class, for the rest of model the score were lower but also high like 0.8 and higher
-this result does concern me to look for reasons behind such high score, such as looking at the bias and variance. 
-Note i have not tuned these models to its optimal.
 
-#### Next steps
-improve the models by using GridSearchCV to fined the best hyper parameters and identify the reason behind the high score i have obtained and weather i have overfitting or underfitting.
-
-#### Outline of project
+## Outline of project
 
 - [kaggle](https://www.kaggle.com/datasets/mrsimple07/obesity-prediction)
 - [Capstone jupyter notebook](https://github.com/asoali67/Capstone/blob/main/Capstone.ipynb)
